@@ -1,0 +1,169 @@
+/* 🌈 Background & Dasar */
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #6bea22, #a0a1a4);
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 25px;
+}
+
+/* 🏷️ Judul */
+h1 {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+
+/* 📝 Form Input Tambah */
+form {
+  display: flex;
+  gap: 10px;
+  background: #fff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✏️ Input Tambah Tugas */
+#task-input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#task-input:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔘 Tombol Umum */
+button {
+  background: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #74b9ff;
+  transform: translateY(-2px);
+}
+
+/* 🔍 Form Pencarian */
+#task-search {
+  display: flex;
+  margin-top: 15px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-input:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ✅ Daftar Tugas */
+#task-list {
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+/* 🎯 Item Tugas */
+#task-list li {
+  background: #fff;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow-wrap: break-word;
+}
+
+#task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🧾 Bagian teks (judul + tanggal) */
+.task-content {
+  flex: 1;
+  min-width: 200px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* 🎛️ Tombol Edit & Hapus */
+.button-group {
+  display: flex;
+  gap: 6px;
+}
+
+.button-group button {
+  padding: 6px 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+/* Warna Tombol */
+.edit-btn {
+  background-color: #00b894;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #55efc4;
+}
+
+.delete-btn {
+  background-color: #d63031;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #590000;
+}
