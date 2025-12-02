@@ -3,7 +3,6 @@ const form = document.getElementById("task-form");
 const input = document.getElementById("task-input");
 const taskList = document.getElementById("task-list");
 
-// 🔍 Elemen input pencarian
 const searchInput = document.getElementById("search-input");
 
 function saveTasks() {
@@ -21,7 +20,6 @@ function loadTasks() {
 function renderTasks(filterText = "") {
   taskList.innerHTML = "";
 
-  // 🔧 simpan juga index asli sebelum filter
   const filteredTasks = tasks
     .map((task, index) => ({ ...task, indexAsli: index }))
     .filter(task =>
@@ -35,23 +33,23 @@ function renderTasks(filterText = "") {
     const content = document.createElement("span");
     content.innerHTML = `<strong>${task.text}</strong><br><small>${task.date}</small>`;
 
-    // Tombol Edit
+    // ikon Edit
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
     editBtn.style.marginLeft = "auto";
     editBtn.style.backgroundColor = "rgb(6, 152, 16)";
     editBtn.addEventListener("click", function () {
-      editTask(task.indexAsli); // gunakan index asli
+      editTask(task.indexAsli); 
     });
 
-    // Tombol Hapus
+    // ikon Hapus
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Hapus";
     deleteBtn.style.marginLeft = "5px";
     deleteBtn.style.backgroundColor = "red";
     deleteBtn.style.color = "white";
     deleteBtn.addEventListener("click", function () {
-      deleteTask(task.indexAsli); // gunakan index asli
+      deleteTask(task.indexAsli);
     });
 
     li.appendChild(content);
@@ -102,7 +100,6 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-// 🔍 Event pencarian real-time
 if (searchInput) {
   searchInput.addEventListener("input", function () {
     renderTasks(searchInput.value);
@@ -110,3 +107,4 @@ if (searchInput) {
 }
 
 window.addEventListener("load", loadTasks);
+
